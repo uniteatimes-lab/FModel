@@ -29,11 +29,8 @@ public partial class EndpointEditor
         InstructionBox.Text = type switch
         {
             EEndpointType.Aes =>
-@"In order to make this work, you first need to understand JSON and its query language. If you don't, please close this window. If your game never changes its AES keys or is not even encrypted, please close this window. If you do understand what you are doing, you have to know that the AES expression supports up to 2 elements.
+@"In order to make this work, you first need to understand JSON and its query language. If you don't, please close this window.
 
-    The first element is mandatory and will be assigned to the main AES key. It has to be looking like a key, else your configuration will not be valid (the key validity against your files will not be checked). Said key must be hexadecimal and can start without ""0x"".
-
-    If your game uses several AES keys, you can specify a second element that will be your list of dynamic keys. The format needed is a list of objects with, at least, the next 2 variables:
 {
     ""guid"": ""the archive guid"",
     ""key"": ""the archive aes key""
